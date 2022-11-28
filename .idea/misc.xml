@@ -4,9 +4,11 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/drawable/radius.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_base.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.27306925455729175" />
-        <entry key="app/src/main/res/layout/activity_signup.xml" value="0.16600200266077905" />
+        <entry key="app/src/main/res/layout/activity_real_signup.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_signup.xml" value="0.1" />
         <entry key="app/src/main/res/xml/radius.xml" value="0.17980072463768115" />
       </map>
     </option>

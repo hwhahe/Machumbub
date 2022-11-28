@@ -1,6 +1,7 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.Machumbub" parent="Theme.AppCompat">
+    <style name="Theme.AppCompat.DayLight.NoActionBar" parent="Theme.AppCompat">
+
 
         <item name="windowNoTitle">true</item>
         <!-- Primary brand color. -->

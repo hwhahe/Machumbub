@@ -10,12 +10,12 @@ import android.view.MenuItem;
 
 import android.os.Bundle;
 
-public class SignupActivity extends AppCompatActivity {
+public class RealSignupActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_signup);
+        setContentView(R.layout.activity_real_signup);
 
         //툴바 생성
         Toolbar toolbar = findViewById(R.id.toolbar);
