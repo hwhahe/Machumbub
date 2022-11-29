@@ -9,6 +9,8 @@ import android.content.Intent;
 import android.view.MenuItem;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 public class RealSignupActivity extends AppCompatActivity {
 
@@ -22,6 +24,16 @@ public class RealSignupActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true); //뒤로가기버튼
         getSupportActionBar().setTitle("로그인"); //툴바 제목
+
+        //공부하기 버튼
+        Button Startbutton = (Button) findViewById(R.id.startb);
+        Startbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), MainLevelActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     //툴바 설정
