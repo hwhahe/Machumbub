@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 //툴바 임포트
 import androidx.appcompat.widget.Toolbar;
-
 import android.content.Intent;
 import android.view.MenuItem;
 
