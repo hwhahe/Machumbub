@@ -8,75 +8,68 @@ import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
-import com.google.android.material.bottomnavigation.BottomNavigationView;
+import java.util.logging.Level;
+
 
 public class MainLevelActivity extends AppCompatActivity {
 
-    private BottomNavigationView bottomNavigationView;
-    private FragmentManager fm;
-    private FragmentTransaction ft;
-    private CommunityFragment communityFragment;
-    private MemoFragment memoFragment;
-    private LevlelSolveFragment levlelSolveFragment;
-    private ResolveFragment resolveFragment;
+    Button memo, levelsolve, resolve, community;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_level);
 
-        bottomNavigationView = findViewById(R.id.btm_navi);
-        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch (item.getItemId()){
-                    case R.id.memo:
-                        setFrag(0);
-                        break;
-                    case R.id.levelsolve:
-                        setFrag(1);
-                        break;
-                    case R.id.resolve:
-                        setFrag(2);
-                        break;
-                    case R.id.community:
-                        setFrag(3);
-                        break;
-                }
+        memo = (Button) findViewById(R.id.memo);
+        levelsolve = (Button) findViewById(R.id.levelsolve);
+        resolve = (Button) findViewById(R.id.resolve);
+        community = (Button) findViewById(R.id.community);
 
-                return true;
+        memo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+                MemoFragment memoFragment = new MemoFragment();
+                transaction.replace(R.id.main_frame, memoFragment);
+                transaction.addToBackStack(null);
+                transaction.commit();
             }
         });
 
-        memoFragment = new MemoFragment();
-        levlelSolveFragment = new LevlelSolveFragment();
-        resolveFragment = new ResolveFragment();
-        communityFragment = new CommunityFragment();
-        setFrag(1);
-    }
+        levelsolve.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+                LevlelSolveFragment levlelSolveFragment = new LevlelSolveFragment();
+                transaction.replace(R.id.main_frame, levlelSolveFragment);
+                transaction.addToBackStack(null);
+                transaction.commit();
+            }
+        });
 
-    //프래그먼트 교체 실행문
-    private void setFrag(int n){
-        fm = getSupportFragmentManager();
-        ft = fm.beginTransaction();
-        switch (n){
-            case 0:
-                ft.replace(R.id.main_frame, memoFragment);
-                ft.commit();
-                break;
-            case 1:
-                ft.replace(R.id.main_frame, levlelSolveFragment);
-                ft.commit();
-                break;
-            case 2:
-                ft.replace(R.id.main_frame, resolveFragment);
-                ft.commit();
-                break;
-            case 3:
-                ft.replace(R.id.main_frame, communityFragment);
-                ft.commit();
-                break;
-        }
+        resolve.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+                ResolveFragment resolveFragment = new ResolveFragment();
+                transaction.replace(R.id.main_frame, resolveFragment);
+                transaction.addToBackStack(null);
+                transaction.commit();
+            }
+        });
+
+        community.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+                CommunityFragment communityFragment = new CommunityFragment();
+                transaction.replace(R.id.main_frame, communityFragment);
+                transaction.addToBackStack(null);
+                transaction.commit();
+            }
+        });
     }
 }
