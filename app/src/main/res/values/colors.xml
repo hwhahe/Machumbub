@@ -9,4 +9,5 @@
     <color name="white">#FFFFFFFF</color>
 
     <color name="background">#FFF8FC</color>
+    <color name="btm_menu">#DED2E4</color>
 </resources>

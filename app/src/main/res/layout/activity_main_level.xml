@@ -27,4 +27,27 @@
 
     </androidx.appcompat.widget.Toolbar>
 
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/btm_navi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/btm_menu"
+        app:itemIconTint="#000000"
+        app:itemTextColor="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/btm_menu" />
+
+    <FrameLayout
+        android:id="@+id/main_frame"
+        android:layout_width="match_parent"
+        android:layout_height="617dp"
+        app:layout_constraintBottom_toTopOf="@+id/btm_navi"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+    </FrameLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

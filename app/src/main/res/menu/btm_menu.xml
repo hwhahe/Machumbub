@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/memo"
+        android:enabled="true"
+        android:icon="@drawable/memo"
+        android:title="메모"/>
+
+    <item
+        android:id="@+id/levelsolve"
+        android:enabled="true"
+        android:icon="@drawable/levelsolve"
+        android:title="레벨별 풀이"/>
+
+    <item
+        android:id="@+id/resolve"
+        android:enabled="true"
+        android:icon="@drawable/re_solve"
+        android:title="재풀이"/>
+
+    <item
+        android:id="@+id/community"
+        android:enabled="true"
+        android:icon="@drawable/comunity"
+        android:title="커뮤니티"/>
+
+</menu>
