@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainLevelActivity"
-    android:background="@color/background">
+    android:background="@color/background"
+    tools:ignore="ExtraText">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -17,27 +18,36 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="right"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/mypage"
+            style="?android:attr/borderlessButtonStyle"/>
     </androidx.appcompat.widget.Toolbar>
 
-
+    //이거 쓰지마!!
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/btm_navi"
+        android:id="@+id/main_frame"
         android:layout_width="match_parent"
         android:layout_height="90dp"
         android:background="@color/btm_menu"
         app:layout_constraintBottom_toBottomOf="parent">
 
         <Button
-            android:id="@+id/memo"
+            android:id="@+id/resolve"
             android:layout_width="80dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
             android:layout_weight="1"
             android:background="#00ff0000"
-            android:drawableTop="@drawable/memo"
-            android:text="메모"
+            android:drawableTop="@drawable/re_solve"
+            android:text="재풀이"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="@+id/btm_navi"
-            app:layout_constraintRight_toLeftOf="@id/levelsolve"
+            app:layout_constraintEnd_toStartOf="@+id/community"
+            app:layout_constraintStart_toEndOf="@+id/levelsolve"
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
@@ -49,36 +59,38 @@
             android:drawableTop="@drawable/levelsolve"
             android:text="레벨별 풀이"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toRightOf="@+id/memo"
-            app:layout_constraintRight_toLeftOf="@id/resolve"
+            app:layout_constraintEnd_toStartOf="@+id/resolve"
+            app:layout_constraintStart_toEndOf="@+id/memo"
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/resolve"
+            android:id="@+id/memo"
             android:layout_width="80dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="20dp"
             android:layout_weight="1"
             android:background="#00ff0000"
-            android:drawableTop="@drawable/re_solve"
-            android:text="재풀이"
+            android:drawableTop="@drawable/memo"
+            android:text="메모"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toRightOf="@id/levelsolve"
-            app:layout_constraintRight_toLeftOf="@id/community"
+            app:layout_constraintEnd_toStartOf="@+id/levelsolve"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
             android:id="@+id/community"
             android:layout_width="80dp"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
             android:layout_weight="1"
             android:background="#00ff0000"
             android:drawableTop="@drawable/comunity"
             android:text="커뮤니티"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toRightOf="@id/resolve"
-            app:layout_constraintRight_toRightOf="@id/btm_navi"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/resolve"
             app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
