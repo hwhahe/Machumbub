@@ -18,7 +18,7 @@ public class MemoFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.activity_main_level,container,false);
+        view = inflater.inflate(R.layout.fragment_memo,container,false);
 
         return view;
     }
