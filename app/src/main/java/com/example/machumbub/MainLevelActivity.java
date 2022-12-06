@@ -2,10 +2,12 @@ package com.example.machumbub;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -23,6 +25,17 @@ public class MainLevelActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_level);
 
+        //레벨1버튼
+        Button level1b = (Button) findViewById(R.id.level1);
+        level1b.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), level1Activity.class);
+                startActivity(intent);
+            }
+        });
+
+        //하단탭
         memo = (Button) findViewById(R.id.memo);
         levelsolve = (Button) findViewById(R.id.levelsolve);
         resolve = (Button) findViewById(R.id.resolve);
@@ -71,5 +84,27 @@ public class MainLevelActivity extends AppCompatActivity {
                 transaction.commit();
             }
         });
+
+        //툴바 생성
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true); //뒤로가기버튼
+        getSupportActionBar().setTitle("메인 화면"); //툴바 제목
+
+    }
+
+    //툴바 설정
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case android.R.id.home: { //백 키 눌렀을 때 동작
+
+                //액티비티 이동
+                Intent intent = new Intent(getApplicationContext(), MypageActivity.class);
+                startActivity(intent);
+                return true;
+            }
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
