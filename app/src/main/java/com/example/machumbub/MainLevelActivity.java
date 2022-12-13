@@ -44,11 +44,8 @@ public class MainLevelActivity extends AppCompatActivity {
         memo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-                MemoFragment memoFragment = new MemoFragment();
-                transaction.replace(R.id.main_frame, memoFragment);
-                transaction.addToBackStack(null);
-                transaction.commit();
+                Intent intent = new Intent(getApplicationContext(), MemoActivity.class);
+                startActivity(intent);
             }
         });
 

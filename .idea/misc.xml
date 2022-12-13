@@ -3,20 +3,26 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/borderline.xml" value="0.2185" />
         <entry key="app/src/main/res/drawable/person-48px.xml" value="0.246" />
         <entry key="app/src/main/res/drawable/quisbutton.xml" value="0.215" />
         <entry key="app/src/main/res/drawable/radius.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/sqareradius.xml" value="0.2065" />
         <entry key="app/src/main/res/layout/activity_base.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_cancle_popup.xml" value="0.24270833333333333" />
         <entry key="app/src/main/res/layout/activity_level1.xml" value="0.17989501953125003" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.165" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.27306925455729175" />
         <entry key="app/src/main/res/layout/activity_main_level.xml" value="0.18622283935546874" />
         <entry key="app/src/main/res/layout/activity_memo.xml" value="0.24270833333333333" />
+        <entry key="app/src/main/res/layout/activity_memoitem.xml" value="0.24270833333333333" />
         <entry key="app/src/main/res/layout/activity_mypage.xml" value="0.24270833333333333" />
         <entry key="app/src/main/res/layout/activity_quiz1.xml" value="0.22784881591796874" />
+        <entry key="app/src/main/res/layout/activity_re_write.xml" value="0.24270833333333333" />
         <entry key="app/src/main/res/layout/activity_real_signup.xml" value="0.2823654174804688" />
         <entry key="app/src/main/res/layout/activity_signup.xml" value="0.23935852050781248" />
+        <entry key="app/src/main/res/layout/activity_view.xml" value="0.24270833333333333" />
+        <entry key="app/src/main/res/layout/activity_write_memo.xml" value="0.24375" />
         <entry key="app/src/main/res/layout/botton_tap.xml" value="0.1708312988281251" />
         <entry key="app/src/main/res/layout/fragment_community.xml" value="0.246875" />
         <entry key="app/src/main/res/layout/fragment_levlel_solve.xml" value="0.1" />
